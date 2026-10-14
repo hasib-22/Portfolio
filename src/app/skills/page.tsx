@@ -138,8 +138,8 @@ function SkillsContent() {
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.35 }}
                             >
-                                {/* Desktop: card grid with logo + name */}
-                                <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-4">
+                                {/* Responsive card grid with logo + name */}
+                                <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                                     {activeSkills.map((skill, index) => {
                                         const Icon = skill.icon;
                                         return (
@@ -148,12 +148,12 @@ function SkillsContent() {
                                                 initial={{ opacity: 0, scale: 0.95 }}
                                                 animate={{ opacity: 1, scale: 1 }}
                                                 transition={{ duration: 0.3, delay: index * 0.05 }}
-                                                className="group flex flex-col items-center justify-center gap-4 p-6 rounded-2xl border border-white/6 bg-white/2 backdrop-blur-sm hover:bg-white/4 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 cursor-default"
+                                                className="group flex min-w-0 flex-col items-center justify-center gap-3 sm:gap-4 rounded-2xl border border-white/6 bg-white/2 p-4 sm:p-6 backdrop-blur-sm hover:bg-white/4 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 cursor-default"
                                             >
-                                                <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-background-dark/60 border border-white/6 text-gray-400 group-hover:text-primary group-hover:border-primary/20 transition-colors duration-300">
-                                                    <Icon size={28} />
+                                                <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl bg-background-dark/60 border border-white/6 text-gray-400 group-hover:text-primary group-hover:border-primary/20 transition-colors duration-300">
+                                                    <Icon size={28} className="h-6 w-6 sm:h-7 sm:w-7" />
                                                 </div>
-                                                <span className="text-sm font-semibold text-white text-center">{skill.name}</span>
+                                                <span className="text-xs sm:text-sm font-semibold text-white text-center">{skill.name}</span>
                                             </motion.div>
                                         );
                                     })}
