@@ -4,6 +4,7 @@ const nextConfig = {
 
   // Lock external image sources to only the domains actually used
   images: {
+    unoptimized: true, // required for static export
     remotePatterns: [
       {
         protocol: 'https',

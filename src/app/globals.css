@@ -91,3 +91,25 @@ section:not(#projects) {
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
 }
+
+.bg-orb {
+    position: absolute;
+    width: 50vmax;
+    height: 50vmax;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsl(var(--h) 80% 60% / 0.08), transparent 70%);
+    will-change: transform;
+    animation: orb-drift 40s ease-in-out infinite alternate;
+}
+
+@keyframes orb-drift {
+    to {
+        transform: translate3d(15vw, 10vh, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bg-orb {
+        animation: none;
+    }
+}
