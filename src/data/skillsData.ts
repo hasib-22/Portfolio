@@ -8,6 +8,7 @@ import {
     SiRedux,
     SiRedis,
     SiPandas,
+    SiShadcnui,
 } from 'react-icons/si';
 import { TbCode, TbLayout, TbServer, TbDatabase, TbTools } from 'react-icons/tb';
 
@@ -40,6 +41,7 @@ export const skills: Skill[] = [
     // Frontend
     { name: 'Next.js', category: 'frontend', icon: SiNextdotjs },
     { name: 'React.js', category: 'frontend', icon: FaReact },
+    { name: 'Shadcn ui', category: 'frontend', icon: SiShadcnui },
     { name: 'Tanstack Query', category: 'frontend', icon: SiTanstack },
     { name: 'Redux', category: 'frontend', icon: SiRedux },
     { name: 'Zustand', category: 'frontend', icon: GiPanda },
